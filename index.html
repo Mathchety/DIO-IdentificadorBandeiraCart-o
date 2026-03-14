@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Identificador de Bandeira de Cartão</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💳 Identificador de Bandeira de Cartão</h1>
+      <p class="subtitle">Digite o número do cartão para identificar a bandeira</p>
+    </header>
+
+    <main>
+      <div class="card-preview" id="cardPreview">
+        <div class="card-brand-logo" id="cardBrandLogo">
+          <span class="brand-icon" id="brandIcon">?</span>
+        </div>
+        <div class="card-number-display" id="cardNumberDisplay">
+          •••• •••• •••• ••••
+        </div>
+      </div>
+
+      <div class="input-section">
+        <label for="cardNumber">Número do Cartão</label>
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="cardNumber"
+            class="card-input"
+            placeholder="0000 0000 0000 0000"
+            maxlength="23"
+            autocomplete="cc-number"
+            inputmode="numeric"
+          />
+          <button class="clear-btn" id="clearBtn" title="Limpar" aria-label="Limpar campo">✕</button>
+        </div>
+
+        <div class="result" id="result">
+          <div class="brand-name" id="brandName">Aguardando número...</div>
+          <div class="brand-info" id="brandInfo"></div>
+        </div>
+      </div>
+
+      <div class="supported-brands">
+        <h2>Bandeiras Suportadas</h2>
+        <div class="brands-grid" id="brandsGrid"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Desenvolvido como parte do desafio DIO · Identificador de Bandeira de Cartão</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
